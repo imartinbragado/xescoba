@@ -1,0 +1,17 @@
+1.3.0 Update and compile under gtk 2.0.0
+        gettextize  <bug-gnu-gettext@gnu.org>
+
+	* Makefile.am (SUBDIRS): Remove intl.
+	(ACLOCAL_AMFLAGS): New variable.
+	(EXTRA_DIST): Add m4/ChangeLog.
+	* configure.ac (AC_CONFIG_FILES): Remove intl/Makefile.
+
+1.2.1	1.2.0 didn't compile propertly under recent gcc version. The bug was
+	in the itemfactory.c, used to put the menus. Now the menus was
+	complety rewriting from scratch, helped by glade. Other minor
+	changes.
+1.2.0	Update program to compile under GTK+ 1.2.0. This includes: better
+	menus, the "Game exposition Window" now has a colourized text
+	widget, more documentation (I've created a man page and translate
+	documentation into English). Improving the external aspect of the
+	program. (Using xescobarc).

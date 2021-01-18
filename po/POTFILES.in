@@ -1,0 +1,10 @@
+src/main.cc
+src/baraja.cc
+src/config.cc
+src/escoba.cc
+src/funcmenu.cc
+src/func.cc
+src/idle.cc
+src/menu.cc
+src/jugador.cc
+src/help.cc

@@ -1,0 +1,16 @@
+#include "/usr/local/share/themes/Pixmap/gtk/gtkrc"
+
+pixmap_path "/usr/local/share/xescoba"
+
+style "tapete"
+{
+	bg_pixmap[NORMAL]="tapete.xpm"
+	bg_pixmap[PRELIGHT]="tapete2.xpm"
+	bg_pixmap[ACTIVE]="tapete3.xpm"
+}
+style "mesa"
+{
+        bg_pixmap[NORMAL]="mesa.xpm"
+}
+widget_class "GtkWindow" style "mesa"
+widget_class "*GtkFrame*.*GtkToggleButton*" style "tapete"

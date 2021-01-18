@@ -1,0 +1,18 @@
+Begin3
+Title:          xescoba
+Version:        1.2.1
+Entered-date:   April 15th, 2001
+Description:    A GTK/X11 implementation of 'escoba' Spanish cards game. 
+		xescoba is a game to play against computer or other humans
+		the Spanish 'escoba' cards game.
+Keywords:       escoba, card, game, Spanish, X11, GTK
+Author:         ignacio.martin@tel.uva.es (Ignacio Martín Bragado)
+Maintained-by:  ignacio.martin@tel.uva.es (Ignacio Martín Bragado)
+Primary-site:   sunsite.enc.edu /pub/X11/games
+		296 kB xescoba-1.2.1.tar.gz
+Alternate-site: www.ele.uva.es ~imartin/programs/xescoba
+		296 kB xescoba-1.2.1.tar.gz
+Original-site:  
+Platforms:      Linux, GTK, X11
+Copying-policy: GPL
+End

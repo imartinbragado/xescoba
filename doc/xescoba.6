@@ -1,0 +1,128 @@
+.PU
+.TH XESCOBA 6x 18-4-1.999 "Ignacio Martín Bragado"
+.SH NAME
+xescoba \- Escoba ( Spanish card game ) for X
+.SH SYNOPSIS
+.B xescoba
+.I [options]
+.SH "DESCRIPTION
+This page manual describes
+.BR xescoba.
+.PP
+.B xescoba
+is a program to play escoba card against computer or another humans.
+.PP
+.B xescoba
+is a implementation of the popular escoba Spanish card game made in GTK.
+
+.SS Game rules
+The 'escoba' purpose is to win the greatest possible amount of cards,
+golds, sevens, sweepings and the special card named the 'velo', that is, the
+seven of golds. Every sweeping and the 'velo' wins one point. For the rest
+the point is won when you have more amount of golds, cards or sevens than
+the others.
+
+You make a 'escoba' or a sweeping when you win all the cards on the
+center.
+
+Playing 'escoba' is simple: You have only to play a card every turn.
+If there is some combination of this card with centers ones adding 15 you
+win this cards. If not your card stays on center. In order to make this
+combination you should know that knights are 9 points, kings 10 and 'sotas'
+8 points. That is. The cards whose nominal value are 1,2,3,4,5,6 and 7 are
+evaluated as 1,2,3,4,5,6 and 7 (no difficult!) and the 10,11 and 12 as 8,9
+and 10. Here is a table:
+.nf
+	Nominal value.		Real value for adding
+	
+	1                               1
+	2                               2
+	3                               3
+	4                               4
+	5                               5
+	6                               6
+	7                               7
+	10 (sota)                       8
+	11 (knight)                     9
+	12 (king)                      10
+.fi
+
+	For example: Playing a seven with a 'sota' is a valid trick, because
+they add 15. 
+
+	More examples: Here are some examples. NOTE: There are a lot of
+more valid tricks then the ones here!.
+
+.nf
+	Real cards			Values for adding  
+
+	1,4,king                        1+4+10    = 15    OK!
+	2,2,2,knight                    2+2+2+9   = 15    OK!
+	7+sota                          7+8       = 15    OK!
+	4,5,6                           4+5+6     = 15    OK!
+	1,1,3,7,3                       1+1+3+7+3 = 15    OK! 	
+.fi
+
+.SH OPTIONS
+This program has no special command line options. You can use all options
+that GTK widgets support.
+
+.SS Menu
+In the properties option of menu you can chose:
+.TP
+.B Sound
+Make sound active or not.
+.TP
+.B Game exposition window
+To active or not the visualization of last trick.
+.TP
+.B Advice
+When advice is active the computer select for you
+what it think is the better trick. If you accept it only have to
+click in turn button. Else you should reselect your trick
+and clicking turn button.
+.TP
+.B Configuration
+When selecting configuration you obtain a configuration
+dialog. Here you can select the number of players (from 2 to 4) and their
+nature (human or computer ones). You can write their names, too.
+
+This dialog modifies the configuration file.
+						
+.SS The configuration file
+The configuration file .xescoba should be in $HOME. Such file have
+the following fields:
+
+jugadores = players_number
+
+players_number is a number from 1 to 4
+
+.nf
+jugador0 = player_name0
+jugador1 = player_name1
+jugador2 = player_name2
+jugador3 = player_name3
+
+naturaleza0 = 0_or_1
+naturaleza1 = 0_or_1
+naturaleza2 = 0_or_1
+naturaleza3 = 0_or_1
+.fi
+
+For a human player you write:
+
+naturalezaX = 0
+
+where 'X' is a 0,1,2,3 according with the other fields. For a
+computer one you write
+
+naturalezaX = 1
+
+.SH "SEE TOO"
+For further information consult the file
+.IR README
+included with the program
+
+.SH AUTHOR
+Ignacio Martín Bragado <ignacio.martin@tel.uva.es>
+

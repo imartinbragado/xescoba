@@ -1,0 +1,47 @@
+/* English */
+
+	To install this program do:
+
+	1.-	./configure
+	2.-	make
+
+	And now, being root
+
+	3.-	make install 
+
+	If, when running xescoba, you get a 'segmentation fault' message, be
+	sure that the line 'pixmap_path' in 'xescobarc' file has the correct
+	path of the .xpm pixmaps that are included in the data directory.
+
+	That's all!
+
+/* Español */
+
+	Para instalar este programa no tienes más que poner:
+
+	1.- 	./configure
+	2.-	make
+
+	Si deseas instalar la página de manual en español, en vez de en
+	inglés, que es como viene por defecto, puedes poner
+
+	2.1.-	cd doc
+	2.2.-	mv xescoba.es.6 xescoba.6
+
+	Y ahora, siendo root
+
+	3.-	make install
+	
+	Y después de esto tendrás el programa funcionando.
+	NOTA: Si quieres que los mensajes del programa estén en español
+	(cosa lógica por otra parte), debes tener exportado ya el idioma, es
+	decir, que la variable del shell LANG sea 'es'. Una forma de hacer
+	esto en el sell 'bash' es:
+
+	4.- export LANG=es
+
+	Si al ejecutar 'xescoba' obtienes el amistoso mensaje 'segmentation
+	fault', es muy probable que la linea que dice 'pixmap_path', que se
+	encuentra en el fichero 'xescobarc' no señale al lugar adecuado
+	donde se encuentran los pixmaps del programa. Corrígelo a mano y
+	se subsanará el error. 

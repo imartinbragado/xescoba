@@ -1,0 +1,22 @@
+2021-01-15  gettextize  <bug-gnu-gettext@gnu.org>
+
+	* Makefile.in.in: Upgrade to gettext-0.19.8.1.
+	* Rules-quot: New file, from gettext-0.19.8.1.
+	* boldquot.sed: New file, from gettext-0.19.8.1.
+	* en@boldquot.header: New file, from gettext-0.19.8.1.
+	* en@quot.header: New file, from gettext-0.19.8.1.
+	* insert-header.sin: New file, from gettext-0.19.8.1.
+	* quot.sed: New file, from gettext-0.19.8.1.
+	* remove-potcdate.sin: New file, from gettext-0.19.8.1.
+	* cat-id-tbl.c: Remove file.
+	* stamp-cat-id: Remove file.
+
+1.2.1	1.2.0 didn't compile propertly under recent gcc version. The bug was
+	in the itemfactory.c, used to put the menus. Now the menus was
+	complety rewriting from scratch, helped by glade. Other minor
+	changes.
+1.2.0	Update program to compile under GTK+ 1.2.0. This includes: better
+	menus, the "Game exposition Window" now has a colourized text
+	widget, more documentation (I've created a man page and translate
+	documentation into English). Improving the external aspect of the
+	program. (Using xescobarc).

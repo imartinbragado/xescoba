@@ -1,0 +1,121 @@
+.TH XESCOBA 6x 18-4-1.999 "Ignacio Martín Bragado"
+.SH NOMBRE
+xescoba \- Juego de la escoba para X.
+.SH SINOPSIS
+.B xescoba
+.I [opciones]
+.SH "DESCRIPCIÓN"
+Esta página de manual describe brevemente el uso del programa
+.BR xescoba.
+.PP
+.B xescoba
+es un programa que permite a una persona jugar al juego español de cartas
+escoba contra el ordenador, o bien contra otras personas, o bien dejar que
+el ordenador juegue contra sí mismo. 
+.PP
+.B xescoba
+es, por tanto, una implementación GTK del popular juego español de cartas
+llamado escoba.
+
+.SS Reglas del juego
+
+El objetivo de la escoba es llevarse el mayor número posible de
+cartas, oros, escobas, sietes y el siete de oros. Cada escoba, así como el
+velo (el siete de oros) vale un punto. Para el resto se lleva un punto el
+que más cantidad haya logrado llevarse. 
+.PP
+Se produce "una escoba" cuando un jugador logra llevarse todas las
+cartas que hay en el centro.
+.PP
+Para jugar hay que tirar siempre una carta. Si existe alguna
+combinación de esa carta con las que hay en el centro tal que sumen quince,
+considerando que las sotas valen 8, los caballos 9 y los reyes 10, y el
+resto de las cartas su puntuación nominal, el jugador recoge las cartas que
+le sumen 15 y las pone en su baza. Por ejemplo, una sota y un siete "suman
+quince" y, por tanto, es una baza válida.
+
+.SH OPCIONES
+Este programa no tiene ninguna opción especial desde la línea de comandos. 
+En principio las opciones que se pueden poner son todas aquellas que admitan
+los widgets GTK que son los que se usan.
+.SS Menú
+En el menú propiedades se puede elegir:
+.TP
+.B Sonido
+Activa/desactiva el sonido.
+.TP
+.B Ver cartas
+Activa/Desactiva el panel para ver la última jugada.
+.TP
+.B Sugerencias
+Cuando está activado el ordenador selecciona para un
+jugador "humano" lo que él considera la mejor jugada.
+
+
+El jugador humano puede aceptarla o bien seleccionar la
+jugada que quiera. Esta selección se hace de forma que la
+mejor jugada (según el criterio del ordenador) aparecerá ya
+cogida tanto en las cartas del centro como en las del
+jugador. Esto es, basta dar al botón de turno si se acepta
+la jugada, porque estarán las cartas seleccionadas.
+
+.TP
+.B Configuración
+Permite decir cuantos van a ser los jugadores en 
+la próxima partida, y si van a tratarse de jugadores
+regulados por el ordenador o bien serán humanos. También se
+puede poner el nombre de los jugadores en el cuadrado
+correspondiente. Para seleccionar el número de jugadores y
+su naturaleza basta con pinchar en el botón adecuado. Para
+cambiar los nombres hay que escribir en el cuadro de nombre
+correspondiente.
+
+Este diálogo lo que hace es modificar el fichero de
+configuración para la próxima partida.
+
+.SS En el fichero de configuración
+
+El fichero de configuración
+.I .xescoba
+debería encontrarse en la base
+de tu directorio personal. Dicho fichero admite los siguientes
+campos:
+
+jugadores = numero_jugadores
+
+Donde numero_jugadores es un entero del 2 al 4.
+
+.nf
+jugador0 = Nombre0
+jugador1 = Nombre1
+jugador2 = Nombre2
+jugador3 = Nombre3
+
+naturaleza0 = 0_o_1
+naturaleza1 = 0_o_1
+naturaleza2 = 0_o_1
+naturaleza3 = 0_o_1
+.fi
+
+Se escriben los nombres de los cuatro jugadores (máximo) así como
+sus naturalezas. Para un jugador humano se pondrá 
+.B naturalezaX = 0 
+siendo X el número del 0 al 3 que representa a este jugador. Para uno
+automático, es
+decir, para que lo lleve el ordenador, se pondrá
+.B naturalezaX = 1
+.
+
+.SH OPCIONES
+Este programa no tiene ninguna opción especial. En principio las opciones
+que se pueden poner son todas aquellas que admitan los widgets GTK que son
+los que se usan.
+
+.SH "VER TAMBIÉN"
+Se puede consultar más documentación del programa en el fichero 
+.IR README.es
+que se incluye con él.
+
+.SH AUTOR
+Ignacio Martín Bragado <ignacio.martin@tel.uva.es>
+

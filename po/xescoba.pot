@@ -1,0 +1,419 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR Free Software Foundation, Inc.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"POT-Creation-Date: 2001-04-15 16:44+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=CHARSET\n"
+"Content-Transfer-Encoding: ENCODING\n"
+
+#. Ventana aplicación
+#: src/main.cc:89
+msgid "Spanish 'escoba' game"
+msgstr ""
+
+#. Creo el contenedor para las cartas centro
+#: src/main.cc:111
+msgid "Cards on center"
+msgstr ""
+
+#. Creo el contenedor para las cartas mano
+#: src/main.cc:129
+msgid "Cards in player's hand"
+msgstr ""
+
+#. Ahora creamos los botones
+#: src/main.cc:151 src/menu.cc:53
+msgid "Quit"
+msgstr ""
+
+#: src/main.cc:160
+msgid "Click here to exit game"
+msgstr ""
+
+#. Un botón de ayuda
+#: src/help.cc:17 src/main.cc:164
+msgid "Help"
+msgstr ""
+
+#: src/main.cc:172
+msgid "Click here to get help"
+msgstr ""
+
+#: src/main.cc:184
+msgid "Click here for turn"
+msgstr ""
+
+#: src/main.cc:187
+msgid "Turn"
+msgstr ""
+
+#. Ventana aplicación
+#: src/main.cc:197
+msgid "Game's status"
+msgstr ""
+
+#: src/main.cc:203
+msgid "Last cards won"
+msgstr ""
+
+#: src/main.cc:222
+msgid "Status bar"
+msgstr ""
+
+#: src/main.cc:292
+#, c-format
+msgid "Puting %s on center"
+msgstr ""
+
+#: src/main.cc:314 src/main.cc:316
+msgid " has won two sweeping"
+msgstr ""
+
+#: src/main.cc:323 src/main.cc:364
+#, c-format
+msgid "%s's turn"
+msgstr ""
+
+#: src/main.cc:353
+msgid ""
+"Trick not valid!\n"
+"The cards don't add 15"
+msgstr ""
+
+#: src/main.cc:427
+msgid " has won!"
+msgstr ""
+
+#. Para que no se pueda seguir.
+#: src/main.cc:429
+#, c-format
+msgid "%s has won!"
+msgstr ""
+
+#: src/main.cc:462
+msgid "couldn't allocate a color"
+msgstr ""
+
+#. Botones dentro del contenedor horizontal hbox2
+#: src/config.cc:146 src/funcmenu.cc:100 src/funcmenu.cc:144 src/help.cc:56
+#: src/main.cc:483
+msgid "Ok"
+msgstr ""
+
+#: src/main.cc:491
+msgid "Click here when reading"
+msgstr ""
+
+#: src/main.cc:548
+msgid "; 0 -> Human nature; 1 -> Computer nature.\n"
+msgstr ""
+
+#: src/config.cc:25 src/menu.cc:89
+msgid "Configuration"
+msgstr ""
+
+#. Creo los dos "frames", uno para el número y otro para los nombres.
+#: src/config.cc:47
+msgid "Players number"
+msgstr ""
+
+#: src/config.cc:53
+msgid "Players properties"
+msgstr ""
+
+#: src/config.cc:71
+msgid "Two"
+msgstr ""
+
+#: src/config.cc:71
+msgid "Three"
+msgstr ""
+
+#: src/config.cc:71
+msgid "Four"
+msgstr ""
+
+#. Nuevo grupo de radio buttons
+#: src/config.cc:115
+msgid "Human"
+msgstr ""
+
+#: src/config.cc:127
+msgid "Computer"
+msgstr ""
+
+#: src/config.cc:159
+msgid "Cancel"
+msgstr ""
+
+#: src/config.cc:272
+msgid "; Config file for xescoba\n"
+msgstr ""
+
+#: src/config.cc:273
+#, c-format
+msgid ""
+";Players number\n"
+"jugadores = %d\n"
+msgstr ""
+
+#: src/config.cc:276
+#, c-format
+msgid ";Player %d name and nature\n"
+msgstr ""
+
+#: src/escoba.cc:293
+msgid "ace"
+msgstr ""
+
+#: src/escoba.cc:293
+msgid "two"
+msgstr ""
+
+#: src/escoba.cc:293
+msgid "three"
+msgstr ""
+
+#: src/escoba.cc:293
+msgid "four"
+msgstr ""
+
+#: src/escoba.cc:293
+msgid "five"
+msgstr ""
+
+#: src/escoba.cc:294
+msgid "six"
+msgstr ""
+
+#: src/escoba.cc:294
+msgid "seven"
+msgstr ""
+
+#: src/escoba.cc:294
+msgid "sota"
+msgstr ""
+
+#: src/escoba.cc:294
+msgid "knight"
+msgstr ""
+
+#: src/escoba.cc:294
+msgid "king"
+msgstr ""
+
+#: src/escoba.cc:302
+msgid "a"
+msgstr ""
+
+#: src/escoba.cc:302
+msgid "a/an"
+msgstr ""
+
+#: src/escoba.cc:305
+msgid "golds"
+msgstr ""
+
+#: src/escoba.cc:305
+msgid "coups"
+msgstr ""
+
+#: src/escoba.cc:305
+msgid "swords"
+msgstr ""
+
+#: src/escoba.cc:305
+msgid "staffs"
+msgstr ""
+
+#: src/escoba.cc:309
+#, c-format
+msgid "%s %s of %s"
+msgstr ""
+
+#: src/funcmenu.cc:64
+msgid "More info"
+msgstr ""
+
+#: src/funcmenu.cc:92
+msgid ""
+"Play 'sweeping' against computer.\n"
+"(C) Ignacio Martín Bragado'01\n"
+"ignacio.martin@tel.uva.es\n"
+"http://www.ele.uva.es/~imartin"
+msgstr ""
+
+#: src/funcmenu.cc:108
+msgid "License ..."
+msgstr ""
+
+#: src/funcmenu.cc:123 src/menu.cc:42
+msgid "License"
+msgstr ""
+
+#: src/funcmenu.cc:134
+msgid "Copying license"
+msgstr ""
+
+#: src/func.cc:68
+#, c-format
+msgid " has played %s"
+msgstr ""
+
+#. Si es la carta... desaparece del montón.
+#: src/func.cc:78
+#, c-format
+msgid " has won %s"
+msgstr ""
+
+#: src/func.cc:83
+#, c-format
+msgid " has won a 'sweeping'!. With this has %d"
+msgstr ""
+
+#: src/func.cc:89
+msgid " has won the 'velo'"
+msgstr ""
+
+#: src/func.cc:291
+#, c-format
+msgid "%s Cards:%02d Golds:%d Sevens:%d Velo:%d Sweepings:%d\n"
+msgstr ""
+
+#: src/func.cc:296
+#, c-format
+msgid "Hands: %d"
+msgstr ""
+
+#. Inicio el texto
+#: src/func.cc:359
+msgid "-------- RESULTS ------------"
+msgstr ""
+
+#: src/func.cc:370
+#, c-format
+msgid "%s cards points: 1\n"
+msgstr ""
+
+#: src/func.cc:376
+msgid " cards points: 1\n"
+msgstr ""
+
+#: src/func.cc:388
+#, c-format
+msgid "%s golds points: 1\n"
+msgstr ""
+
+#: src/func.cc:390
+msgid " golds points: 1\n"
+msgstr ""
+
+#: src/func.cc:401
+#, c-format
+msgid "%s sevens points: 1\n"
+msgstr ""
+
+#: src/func.cc:403
+msgid " sevens points: 1\n"
+msgstr ""
+
+#: src/func.cc:414
+#, c-format
+msgid "%s velo points: 1\n"
+msgstr ""
+
+#: src/func.cc:416
+msgid " velo points: 1\n"
+msgstr ""
+
+#: src/func.cc:422
+#, c-format
+msgid "%s sweepings points: %d\n"
+msgstr ""
+
+#: src/func.cc:425
+#, c-format
+msgid " sweepings points: %d\n"
+msgstr ""
+
+#: src/func.cc:431
+#, c-format
+msgid "%s %d points.\n"
+msgstr ""
+
+#: src/func.cc:434
+#, c-format
+msgid " %d points.\n"
+msgstr ""
+
+#: src/func.cc:475
+msgid "error.au"
+msgstr ""
+
+#: src/func.cc:475
+msgid "risa.au"
+msgstr ""
+
+#: src/func.cc:475
+msgid "trampa.au"
+msgstr ""
+
+#: src/func.cc:475
+msgid "carta.au"
+msgstr ""
+
+#: src/func.cc:476
+msgid "repartir.au"
+msgstr ""
+
+#: src/idle.cc:79
+msgid "Wait, please..."
+msgstr ""
+
+#: src/idle.cc:91
+msgid ""
+"Play 'sweeping' against computer.\n"
+"(C) Ignacio Martín Bragado'98\n"
+"ignacio.martin@tel.uva.es\n"
+"http://www.ele.uva.es/~imartin"
+msgstr ""
+
+#: src/idle.cc:95
+msgid "Loading cards. Wait please..."
+msgstr ""
+
+#: src/menu.cc:28
+msgid "File"
+msgstr ""
+
+#: src/menu.cc:37
+msgid "About"
+msgstr ""
+
+#: src/menu.cc:58
+msgid "Properties"
+msgstr ""
+
+#: src/menu.cc:66
+msgid "Sound"
+msgstr ""
+
+#: src/menu.cc:72
+msgid "Game window"
+msgstr ""
+
+#: src/menu.cc:78
+msgid "Advice"
+msgstr ""
+
+#: src/help.cc:43
+msgid "English"
+msgstr ""
