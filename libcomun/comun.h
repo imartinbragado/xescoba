@@ -4,7 +4,7 @@
 	Este fichero contiene definiciones de funciones de uso comun
 	en estos programas.
 	
-	Autor: Ignacio Martín Bragado
+	Autor: Ignacio Martï¿½n Bragado
 	e-mail: imartin@jmlopez.fam.cie.uva.es
 	
 	Este programa se distribuye con licencia tipo GNU
@@ -50,33 +50,14 @@ class CONF
    FILE *fich;
    char cad[255];
 public:
-   CONF(char *fichero);
+   CONF(const char *fichero);
    ~CONF();
-   long double tomaf(char *que);
-   int tomai(char *que);
-   char tomab(char *que);
-   char *tomas(char *que);
+   long double tomaf(const char *que);
+   int tomai(const char *que);
+   char tomab(const char *que);
+   const char *tomas(const char *que);
 };
 
-class LINEA_COM
-{
-   int argc,i;
-   char **argv;
-   
-public:
-   LINEA_COM(int ac,char **av);
-   char toma(char *que);
-   long double tomaf(char *que, long double & param);
-   int tomai(char *que, int & param);
-   char tomab(char *que, char & param);
-   char * tomas(char *que, char * param);
-};
-
-char * TomaToken(char *que, char * cad = 0);
-void inicia(char *programa, char *version, FILE *fich = stdout);
-char *strcasestr(char *grande,char *peque);
-void fatal(int error,char * porque = 0);
-void casifatal(int error,char * porque = 0);
-void pon_licencia(void);
-int frase_ayuda(char *topico, char *nombre_fich, void (*func)(char *));
+const char * TomaToken(const char *que, char * cad = 0);
+void fatal(int error,const char * porque = 0);
 #endif

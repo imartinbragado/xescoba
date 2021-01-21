@@ -2,9 +2,9 @@
  * Programa:   help.h 
  * Directorio: xescoba-1.2.1/src 
  * Fecha:      Sun Apr 15 16:42:49 CEST 2001 
- * Autor:      Ignacio Martín Bragado.
+ * Autor:      Ignacio Martï¿½n Bragado.
  * e-mail:     ignacio.martin@tel.uva.es 
- * Máquina:    Linux 
+ * Mï¿½quina:    Linux 
  */
 
 /***************************************************************************
@@ -28,321 +28,277 @@
 #    Foundation, Inc., 675 Mass Ave, Cambridge, MA 02139, USA.
 #############################################################################*/
 
-char *HelpStrEn = "None";
-/*"----------------------------------------------------------------------------
-1.- What is xescoba?
-----------------------------------------------------------------------------
-
-	xescoba is an 'escoba' (broom, sweeping) playing program. The escoba 
-game is a popular Spanish cards game.
-
-----------------------------------------------------------------------------
-1.1- What are 'escoba' rules?
-----------------------------------------------------------------------------
-
-	The 'escoba' purpose is to win the greatest possible amount of cards,
-golds, sevens, sweepings and the special card named the 'velo', that is, the
-seven of golds. Every sweeping and the 'velo' wins one point. For the rest
-the point is won when you have more amount of golds, cards or sevens than
-the others.
-
-	You make a 'escoba' or a sweeping when you win all the cards on the
-center.
-
-	Playing 'escoba' is simple: You have only to play a card every turn.
-If there is some combination of this card with centers ones adding 15 you
-win this cards. If not your card stays on center. In order to make this
-combination you should know that knights are 9 points, kings 10 and 'sotas'
-8 points. That is. The cards whose nominal value are 1,2,3,4,5,6 and 7 are
-evaluated as 1,2,3,4,5,6 and 7 (no difficult!) and the 10,11 and 12 as 8,9
-and 10. Here is a table:
-
-	Nominal value.		Real value for adding
-	1				1
-	2				2
-	3				3
-	4				4
-	5				5
-	6				6
-	7				7
-	10 (sota)			8
-	11 (knight)			9
-	12 (king) 			10
-
-	For example: Playing a seven with a 'sota' is a valid trick, because
-they add 15. 
-	More examples: Here are some examples. NOTE: There are a lot of
-more valid tricks then the ones here!.
-	Real cards			Values for adding  
-
-	1,4,king			1+4+10 = 15  	OK!
-	2,2,2,knight			2+2+2+9=15	OK!
-	7+sota				7+8=15		OK!
-	4,5,6				4+5+6=15	OK!
-	1,1,3,7,3			1+1+3+7+3=15	OK! 	
-	
-----------------------------------------------------------------------------
-2.- What are xescoba options?
-----------------------------------------------------------------------------
-
-----------------------------------------------------------------------------
-2.1.- In menu
-----------------------------------------------------------------------------
-
-	In the properties option of menu you can chose:
-
-	Sound	
-		Make sound active or not.
-	Game exposition window
-		To active or not the visualization of last trick.
-	Advice	
-		When advice is active the computer select for you what it
-		think is the better trick. If you accept it only have to
-		click in turn button. Else you should reselect your trick
-		and clicking turn button.
-	Configuration
-		When selecting configuration you obtain a configuration
-		dialog. Here you can select the number of players (from 2 to
-		4) and their nature (human or computer ones). You can write
-		their names, too.
-		This dialog modifies the configuration file. (Further
-		information in 2.2) 
-
-----------------------------------------------------------------------------
-2.2.- The configuration file.
-----------------------------------------------------------------------------
-
-	The configuration file .xescoba should be in $HOME. Such file have
-the following fields:
-
-	jugadores = players_number
-
-		players_number is a number from 1 to 4
-
-	jugador0 = player_name0
-	jugador1 = player_name1
-	jugador2 = player_name2
-	jugador3 = player_name3
-	naturaleza0 = 0_or_1
-	naturaleza1 = 0_or_1
-	naturaleza2 = 0_or_1
-	naturaleza3 = 0_or_1
-
-	For a human player you write:
-		naturalezaX = 0
-	where 'X' is a 0,1,2,3 according with the other fields. For a
-	computer one you write 
-		naturalezaX = 1
-
-----------------------------------------------------------------------------
-3.- Distribution license.
-----------------------------------------------------------------------------
-
-	GPL. For further information see COPYING.
-
-----------------------------------------------------------------------------
-3.1.- About cards pixmaps.
-----------------------------------------------------------------------------
-
-
-	Cards pixmaps have been made by xescoba author, using lots of
-imagination, the excellent GIMP program and his poor artistic talent.
-
-	The Linux logo, created by Larry Ewing, has been used too.
-
-	The license for distributing this pixmaps are GPL (or LGPL).  
-
-----------------------------------------------------------------------------
-3.1.- About xescoba author and his personal folly.
-----------------------------------------------------------------------------
-
-	I'm Ignacio Martín Bragado. You can email me in
-
-	ignacio.martin@tel.uva.es
-
-	New versions and another programs in
-
-	http://www.tel.uva.es/~imartin/
-
-----------------------------------------------------------------------------
-3.2.- Another people contributing
-----------------------------------------------------------------------------
-	Nobody, but if you want...
-	* Your name here	you@domain.??
-
-----------------------------------------------------------------------------
-4.- Additional license
-----------------------------------------------------------------------------
-
-	Here is the license for the linux logo. (The original files are in
-	linux kernel)
-
-logo.txt:
-
-	 This is the full-colour version of the currently unofficial Linux logo
-	('currently unofficial' just means that there has been no paperwork and
-	that I haven't really announced it yet).  It was created by Larry Ewing,
-	and is freely usable as long as you acknowledge Larry as the original
-	artist.
-
-	Note that there are black-and-white versions of this available that
-	scale down to smaller sizes and are better for letterheads or whatever
-	you want to use it for: for the full range of logos take a look at
-	Larry's web-page:
-
-        	http://www.isc.tamu.edu/~lewing/linux/
-
-
-						The end.
-"
-};
-*/
-
-char *HelpStrEs = "None";
-/*
-"----------------------------------------------------------------------------
-1.- ¿Qué es xescoba?
-----------------------------------------------------------------------------
-
-	Xescoba es una implementación en GTK del popular juego español de la
-escoba.
-
-----------------------------------------------------------------------------
-1.1- ¿Cuáles son las reglas de la escoba?
-----------------------------------------------------------------------------
-
-	El objetivo de la escoba es llevarse el mayor número posible de
-cartas, oros, escobas, sietes y el siete de oros. Cada escoba, así como el
-velo (el siete de oros) vale un punto. Para el resto se lleva un punto el
-que más cantidad haya logrado llevarse. 
-	Se produce 'una escoba' cuando un jugador logra llevarse todas las
-cartas que hay en el centro.
-	Para jugar hay que tirar siempre una carta. Si existe alguna
-combinación de esa carta con las que hay en el centro tal que sumen quince,
-considerando que las sotas valen 8, los caballos 9 y los reyes 10, y el
-resto de las cartas su puntuación nominal, el jugador recoge las cartas que
-le sumen 15 y las pone en su baza. Por ejemplo, una sota y un siete 'suman
-quince' y, por tanto, es una baza válida.
-
-----------------------------------------------------------------------------
-2.- ¿Qué opciones tiene xescoba?
-----------------------------------------------------------------------------
-
-----------------------------------------------------------------------------
-2.1.- En el menú.
-----------------------------------------------------------------------------
-
-	En el menú propiedades se puede elegir:
-
-	Sonido-> Activa/desactiva el sonido.
-	Ver cartas->Activa/Desactiva el panel para ver la última jugada.
-	Sugerencias->Cuando está activado el ordenador selecciona para un
-		jugador 'humano' lo que él considera la mejor jugada.
-		El jugador humano puede aceptarla o bien seleccionar la
-		jugada que quiera. Esta selección se hace de forma que la
-		mejor jugada (según el criterio del ordenador) aparecerá ya
-		cogida tanto en las cartas del centro como en las del
-		jugador. Esto es, basta dar al botón de turno si se acepta
-		la jugada, porque estarán las cartas seleccionadas.
-	Configuración -> Permite decir cuantos van a ser los jugadores en 
-		la próxima partida, y si van a tratarse de jugadores
-		regulados por el ordenador o bien serán humanos. También se
-		puede poner el nombre de los jugadores en el cuadrado
-		correspondiente. Para seleccionar el número de jugadores y
-		su naturaleza basta con pinchar en el botón adecuado. Para
-		cambiar los nombres hay que escribir en el cuadro de nombre
-		correspondiente.
-			Este diálogo lo que hace es modificar el fichero de
-		configuración para la próxima partida. (Ver en 2.2).
-
-----------------------------------------------------------------------------
-2.2.- En el fichero de configuración.
-----------------------------------------------------------------------------
-
-	El fichero de configuración .xescoba debería encontrarse en la base
-de tu directorio personal. Dicho fichero admite los siguientes
-campos:
-	jugadores = numero_jugadores
-
-	Donde numero_jugadores es un entero del 2 al 4.
-
-	jugador0 = Nombre0
-	jugador1 = Nombre1
-	jugador2 = Nombre2
-	jugador3 = Nombre3
-	naturaleza0 = 0_o_1
-	naturaleza1 = 0_o_1
-	naturaleza2 = 0_o_1
-	naturaleza3 = 0_o_1
-
-	Se escriben los nombres de los cuatro jugadores (máximo) así como
-sus naturalezas. Para un jugador humano se pondrá 'naturalezaX = 0' siendo X
-el número del 0 al 3 que representa a este jugador. Para uno automático, es
-decir, para que lo lleve el ordenador, se pondrá 'naturalezaX = 1'.
-
-----------------------------------------------------------------------------
-3.- ¿Bajo qué licencia se distribuye xescoba?
-----------------------------------------------------------------------------
-
-	Bajo licencia GPL. Para más información lee el fichero COPYING o
-bien la cabecera de este documento.
-	Básicamente: No tienes que pagar para usar este programa, pero has
-de respetar su copyright. Los términos exactos se encuentran en el fichero
-COPYING.
-
-----------------------------------------------------------------------------
-3.1.- ¿De dónde han salido esos dibujos de las cartas?
-----------------------------------------------------------------------------
-
-	Los dibujos de las cartas han sido íntegramente realizados por el
-autor de xescoba y también se distribuyen con licencia GPL (o, si se
-quisieran usar como librería, bajo LGPL). Les he hecho usando la
-imaginación, el programa GIMP y mis penosas dotes artísticas. No obstante
-también he usado el logotipo de linux, creado por Larry Ewing, para ponerle
-de relieve en los oros. Incluyo más abajo la licencia de distribución de
-dicho fichero.
- 
-
-----------------------------------------------------------------------------
-3.1.- ¿Quién se dedica a tan productivos entretenimientos?
-----------------------------------------------------------------------------
-
-	Soy yo, Ignacio Martín Bragado. Puedes escribirme e:
-
-	ignacio.martin@tel.uva.es
-
-	Nuevas versiones y otros programas en:
-
-	http://www.ele.uva.es/~imartin/
-
-----------------------------------------------------------------------------
-3.2.- ¿Quién más ha colaborado?
-----------------------------------------------------------------------------
-
-	Aún nadie más... pero estás a tiempo ;-).
-
-----------------------------------------------------------------------------
-4.- Licencias adicionales.
-----------------------------------------------------------------------------
-
-	Tal y como se ha indicado en 3.1 he tomado para la creación del
-relieven en los oros el fichero logo.jpg que se distribuye con el núcleo linux.
-No obstante incluyo aquí su licencia de utilización respectiva:
-
-logo.txt:
-
-	 This is the full-colour version of the currently unofficial Linux logo
-	('currently unofficial' just means that there has been no paperwork and
-	that I haven't really announced it yet).  It was created by Larry Ewing,
-	and is freely usable as long as you acknowledge Larry as the original
-	artist.
-
-	Note that there are black-and-white versions of this available that
-	scale down to smaller sizes and are better for letterheads or whatever
-	you want to use it for: for the full range of logos take a look at
-	Larry's web-page:
-
-        	http://www.isc.tamu.edu/~lewing/linux/
-"
-
-*/
+const char *HelpStrEn = 
+"----------------------------------------------------------------------------\n"
+"1.- What is xescoba?\n"
+"----------------------------------------------------------------------------\n"
+"\n"
+"xescoba is an 'escoba' (broom, sweeping) playing program. The escoba \n"
+"game is a popular Spanish cards game.\n"
+"\n"
+"----------------------------------------------------------------------------\n"
+"1.1- What are 'escoba' rules?\n"
+"----------------------------------------------------------------------------\n"
+"\n"
+"	The 'escoba' purpose is to win the greatest possible amount of cards,\n"
+"golds, sevens, sweepings and the special card named the 'velo', that is, the\n"
+"seven of golds. Every sweeping and the 'velo' wins one point. For the rest\n"
+"the point is won when you have more amount of golds, cards or sevens than\n"
+"the others.\n"
+"\n"
+"	You make a 'escoba' or a sweeping when you win all the cards on the\n"
+"center.\n"
+"\n"
+"	Playing 'escoba' is simple: You have only to play a card every turn.\n"
+"If there is some combination of this card with centers ones adding 15 you\n"
+"win this cards. If not your card stays on center. In order to make this\n"
+"combination you should know that knights are 9 points, kings 10 and 'sotas'\n"
+"8 points. That is. The cards whose nominal value are 1,2,3,4,5,6 and 7 are\n"
+"evaluated as 1,2,3,4,5,6 and 7 (no difficult!) and the 10,11 and 12 as 8,9\n"
+"and 10. Here is a table:\n"
+"\n"
+"	Nominal value.		Real value for adding\n"
+"	1				1\n"
+"	2				2\n"
+"	3				3\n"
+"	4				4\n"
+"	5				5\n"
+"	6				6\n"
+"	7				7\n"
+"	10 (sota)			8\n"
+"	11 (knight)			9\n"
+"	12 (king) 			10\n"
+"\n"
+"	For example: Playing a seven with a 'sota' is a valid trick, because\n"
+"they add 15. \n"
+"	More examples: Here are some examples. NOTE: There are a lot of\n"
+"more valid tricks then the ones here!.\n"
+"	Real cards			Values for adding  \n"
+"\n"
+"	1,4,king			1+4+10 = 15  	OK!\n"
+"	2,2,2,knight			2+2+2+9=15	OK!\n"
+"	7+sota				7+8=15		OK!\n"
+"	4,5,6				4+5+6=15	OK!\n"
+"	1,1,3,7,3			1+1+3+7+3=15	OK! 	\n"
+"	\n"
+"----------------------------------------------------------------------------\n"
+"2.- What are xescoba options?\n"
+"----------------------------------------------------------------------------\n"
+"\n"
+"----------------------------------------------------------------------------\n"
+"2.1.- In menu\n"
+"----------------------------------------------------------------------------\n"
+"\n"
+"	In the properties option of menu you can chose:\n"
+"\n"
+"	Sound	\n"
+"		Make sound active or not.\n"
+"	Game exposition window\n"
+"		To active or not the visualization of last trick.\n"
+"	Advice	\n"
+"		When advice is active the computer select for you what it\n"
+"		think is the better trick. If you accept it only have to\n"
+"		click in turn button. Else you should reselect your trick\n"
+"		and clicking turn button.\n"
+"	Configuration\n"
+"		When selecting configuration you obtain a configuration\n"
+"		dialog. Here you can select the number of players (from 2 to\n"
+"		4) and their nature (human or computer ones). You can write\n"
+"		their names, too.\n"
+"		This dialog modifies the configuration file. (Further\n"
+"		information in 2.2) \n"
+"\n"
+"----------------------------------------------------------------------------\n"
+"2.2.- The configuration file.\n"
+"----------------------------------------------------------------------------\n"
+"\n"
+"	The configuration file .xescoba should be in $HOME. Such file have\n"
+"the following fields:\n"
+"\n"
+"	jugadores = players_number\n"
+"\n"
+"		players_number is a number from 1 to 4\n"
+"\n"
+"	jugador0 = player_name0\n"
+"	jugador1 = player_name1\n"
+"	jugador2 = player_name2\n"
+"	jugador3 = player_name3\n"
+"	naturaleza0 = 0_or_1\n"
+"	naturaleza1 = 0_or_1\n"
+"	naturaleza2 = 0_or_1\n"
+"	naturaleza3 = 0_or_1\n"
+"\n"
+"	For a human player you write:\n"
+"		naturalezaX = 0\n"
+"	where 'X' is a 0,1,2,3 according with the other fields. For a\n"
+"	computer one you write \n"
+"		naturalezaX = 1\n"
+"\n"
+"----------------------------------------------------------------------------\n"
+"3.- Distribution license.\n"
+"----------------------------------------------------------------------------\n"
+"\n"
+"	GPL. For further information see COPYING.\n"
+"\n"
+"----------------------------------------------------------------------------\n"
+"3.1.- About cards pixmaps.\n"
+"----------------------------------------------------------------------------\n"
+"\n"
+"\n"
+"	Cards pixmaps have been made by xescoba author, using lots of\n"
+"imagination, the excellent GIMP program and his poor artistic talent.\n"
+"\n"
+"	The Linux logo, created by Larry Ewing, has been used too.\n"
+"\n"
+"	The license for distributing this pixmaps are GPL (or LGPL).  \n"
+"\n"
+"----------------------------------------------------------------------------\n"
+"4.- Additional license\n"
+"----------------------------------------------------------------------------\n"
+"\n"
+"	Here is the license for the linux logo. (The original files are in\n"
+"	linux kernel)\n"
+"\n"
+"logo.txt:\n"
+"\n"
+"	 This is the full-colour version of the currently unofficial Linux logo\n"
+"	('currently unofficial' just means that there has been no paperwork and\n"
+"	that I haven't really announced it yet).  It was created by Larry Ewing,\n"
+"	and is freely usable as long as you acknowledge Larry as the original\n"
+"	artist.\n"
+"\n"
+"	Note that there are black-and-white versions of this available that\n"
+"	scale down to smaller sizes and are better for letterheads or whatever\n"
+"	you want to use it for: for the full range of logos take a look at\n"
+"	Larry's web-page:\n"
+"\n"
+"        	http://www.isc.tamu.edu/~lewing/linux/\n"
+"\n"
+"\n"
+"						The end.\n";
+
+const char *HelpStrEs = 
+"----------------------------------------------------------------------------\n"
+"1.- ï¿½Quï¿½ es xescoba?\n"
+"----------------------------------------------------------------------------\n"
+"\n"
+"	Xescoba es una implementaciï¿½n en GTK del popular juego espaï¿½ol de la\n"
+"escoba.\n"
+"\n"
+"----------------------------------------------------------------------------\n"
+"1.1- ï¿½Cuï¿½les son las reglas de la escoba?\n"
+"----------------------------------------------------------------------------\n"
+"\n"
+"	El objetivo de la escoba es llevarse el mayor nï¿½mero posible de\n"
+"cartas, oros, escobas, sietes y el siete de oros. Cada escoba, asï¿½ como el\n"
+"velo (el siete de oros) vale un punto. Para el resto se lleva un punto el\n"
+"que mï¿½s cantidad haya logrado llevarse. \n"
+"	Se produce 'una escoba' cuando un jugador logra llevarse todas las\n"
+"cartas que hay en el centro.\n"
+"	Para jugar hay que tirar siempre una carta. Si existe alguna\n"
+"combinaciï¿½n de esa carta con las que hay en el centro tal que sumen quince,\n"
+"considerando que las sotas valen 8, los caballos 9 y los reyes 10, y el\n"
+"resto de las cartas su puntuaciï¿½n nominal, el jugador recoge las cartas que\n"
+"le sumen 15 y las pone en su baza. Por ejemplo, una sota y un siete 'suman\n"
+"quince' y, por tanto, es una baza vï¿½lida.\n"
+"\n"
+"----------------------------------------------------------------------------\n"
+"2.- ï¿½Quï¿½ opciones tiene xescoba?\n"
+"----------------------------------------------------------------------------\n"
+"\n"
+"----------------------------------------------------------------------------\n"
+"2.1.- En el menï¿½.\n"
+"----------------------------------------------------------------------------\n"
+"\n"
+"	En el menï¿½ propiedades se puede elegir:\n"
+"\n"
+"	Sonido-> Activa/desactiva el sonido.\n"
+"	Ver cartas->Activa/Desactiva el panel para ver la ï¿½ltima jugada.\n"
+"	Sugerencias->Cuando estï¿½ activado el ordenador selecciona para un\n"
+"		jugador 'humano' lo que ï¿½l considera la mejor jugada.\n"
+"		El jugador humano puede aceptarla o bien seleccionar la\n"
+"		jugada que quiera. Esta selecciï¿½n se hace de forma que la\n"
+"		mejor jugada (segï¿½n el criterio del ordenador) aparecerï¿½ ya\n"
+"		cogida tanto en las cartas del centro como en las del\n"
+"		jugador. Esto es, basta dar al botï¿½n de turno si se acepta\n"
+"		la jugada, porque estarï¿½n las cartas seleccionadas.\n"
+"	Configuraciï¿½n -> Permite decir cuantos van a ser los jugadores en \n"
+"		la prï¿½xima partida, y si van a tratarse de jugadores\n"
+"		regulados por el ordenador o bien serï¿½n humanos. Tambiï¿½n se\n"
+"		puede poner el nombre de los jugadores en el cuadrado\n"
+"		correspondiente. Para seleccionar el nï¿½mero de jugadores y\n"
+"		su naturaleza basta con pinchar en el botï¿½n adecuado. Para\n"
+"		cambiar los nombres hay que escribir en el cuadro de nombre\n"
+"		correspondiente.\n"
+"			Este diï¿½logo lo que hace es modificar el fichero de\n"
+"		configuraciï¿½n para la prï¿½xima partida. (Ver en 2.2).\n"
+"\n"
+"----------------------------------------------------------------------------\n"
+"2.2.- En el fichero de configuraciï¿½n.\n"
+"----------------------------------------------------------------------------\n"
+"\n"
+"	El fichero de configuraciï¿½n .xescoba deberï¿½a encontrarse en la base\n"
+"de tu directorio personal. Dicho fichero admite los siguientes\n"
+"campos:\n"
+"	jugadores = numero_jugadores\n"
+"\n"
+"	Donde numero_jugadores es un entero del 2 al 4.\n"
+"\n"
+"	jugador0 = Nombre0\n"
+"	jugador1 = Nombre1\n"
+"	jugador2 = Nombre2\n"
+"	jugador3 = Nombre3\n"
+"	naturaleza0 = 0_o_1\n"
+"	naturaleza1 = 0_o_1\n"
+"	naturaleza2 = 0_o_1\n"
+"	naturaleza3 = 0_o_1\n"
+"\n"
+"	Se escriben los nombres de los cuatro jugadores (mï¿½ximo) asï¿½ como\n"
+"sus naturalezas. Para un jugador humano se pondrï¿½ 'naturalezaX = 0' siendo X\n"
+"el nï¿½mero del 0 al 3 que representa a este jugador. Para uno automï¿½tico, es\n"
+"decir, para que lo lleve el ordenador, se pondrï¿½ 'naturalezaX = 1'.\n"
+"\n"
+"----------------------------------------------------------------------------\n"
+"3.- ï¿½Bajo quï¿½ licencia se distribuye xescoba?\n"
+"----------------------------------------------------------------------------\n"
+"\n"
+"	Bajo licencia GPL. Para mï¿½s informaciï¿½n lee el fichero COPYING o\n"
+"bien la cabecera de este documento.\n"
+"	Bï¿½sicamente: No tienes que pagar para usar este programa, pero has\n"
+"de respetar su copyright. Los tï¿½rminos exactos se encuentran en el fichero\n"
+"COPYING.\n"
+"\n"
+"----------------------------------------------------------------------------\n"
+"3.1.- ï¿½De dï¿½nde han salido esos dibujos de las cartas?\n"
+"----------------------------------------------------------------------------\n"
+"\n"
+"	Los dibujos de las cartas han sido ï¿½ntegramente realizados por el\n"
+"autor de xescoba y tambiï¿½n se distribuyen con licencia GPL (o, si se\n"
+"quisieran usar como librerï¿½a, bajo LGPL). Les he hecho usando la\n"
+"imaginaciï¿½n, el programa GIMP y mis penosas dotes artï¿½sticas. No obstante\n"
+"tambiï¿½n he usado el logotipo de linux, creado por Larry Ewing, para ponerle\n"
+"de relieve en los oros. Incluyo mï¿½s abajo la licencia de distribuciï¿½n de\n"
+"dicho fichero.\n"
+" \n"
+"----------------------------------------------------------------------------\n"
+"4.- Licencias adicionales.\n"
+"----------------------------------------------------------------------------\n"
+"\n"
+"	Tal y como se ha indicado en 3.1 he tomado para la creaciï¿½n del\n"
+"relieven en los oros el fichero logo.jpg que se distribuye con el nï¿½cleo linux.\n"
+"No obstante incluyo aquï¿½ su licencia de utilizaciï¿½n respectiva:\n"
+"\n"
+"logo.txt:\n"
+"\n"
+"	 This is the full-colour version of the currently unofficial Linux logo\n"
+"	('currently unofficial' just means that there has been no paperwork and\n"
+"	that I haven't really announced it yet).  It was created by Larry Ewing,\n"
+"	and is freely usable as long as you acknowledge Larry as the original\n"
+"	artist.\n"
+"\n"
+"	Note that there are black-and-white versions of this available that\n"
+"	scale down to smaller sizes and are better for letterheads or whatever\n"
+"	you want to use it for: for the full range of logos take a look at\n"
+"	Larry's web-page:\n"
+"\n"
+"       	http://www.isc.tamu.edu/~lewing/linux/\n";

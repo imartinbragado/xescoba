@@ -2,24 +2,24 @@
  * Programa:   jugador.h 
  * Directorio: xescoba-1.2.1/src 
  * Fecha:      Sun Apr 15 16:42:49 CEST 2001 
- * Autor:      Ignacio Martín Bragado.
+ * Autor:      Ignacio Martï¿½n Bragado.
  * e-mail:     ignacio.martin@tel.uva.es 
- * Máquina:    Linux 
+ * Mï¿½quina:    Linux 
  */
 
 /*************************************************************************
- * Este programa es de libre distribución; puedes distribuirlo y/o modificarlo
- * bajo los términos de la GNU General Public License como se publicó por la
- * Free Software Foundation; bien la versión 2 de la licencia o,  bajo tu
- * criterio, cualquier versión posterior.
+ * Este programa es de libre distribuciï¿½n; puedes distribuirlo y/o modificarlo
+ * bajo los tï¿½rminos de la GNU General Public License como se publicï¿½ por la
+ * Free Software Foundation; bien la versiï¿½n 2 de la licencia o,  bajo tu
+ * criterio, cualquier versiï¿½n posterior.
  * 
- * Este programa se distribuye con la esperanza de que sea útil, pero 
- * SIN NINGUNA GARANTÏA; sin, incluso, ninguna garantía implicada por
- * MERCANCIBILIDAD o POR ALGÜN PROPÓSITO PARTICULAR. Lee la
- * GNU General Public License para más información.
+ * Este programa se distribuye con la esperanza de que sea ï¿½til, pero 
+ * SIN NINGUNA GARANTï¿½A; sin, incluso, ninguna garantï¿½a implicada por
+ * MERCANCIBILIDAD o POR ALGï¿½N PROPï¿½SITO PARTICULAR. Lee la
+ * GNU General Public License para mï¿½s informaciï¿½n.
  * 
- * Deberías haber recibido una copia de la GNU General Public License
- * junto con este programa. Si no es así escribe a Free Software
+ * Deberï¿½as haber recibido una copia de la GNU General Public License
+ * junto con este programa. Si no es asï¿½ escribe a Free Software
  * Foundation, Inc., 675 Mass Ave, Cambridge, MA 02139, USA.
  * *****************************************************/
 
@@ -55,18 +55,18 @@ class jugador {
    char naturaleza;  //FALSE si es humano. TRUE si es computador.
    char mano[40];
    char nombre[40]; //El nombre del jugador.
-   void turno_humano(char *hay,char carta_coge, char * cartas_tirab);
+   void turno_humano(char *hay,char carta_coge, const char * cartas_tirab);
    void turno_computador(char *hay);
  public:
-   jugador(char *name,char tipo);
+   jugador(const char *name,char tipo);
    jugador();
-   void da_nombre(char * name);
+   void da_nombre(const char * name);
    void da_naturaleza(int tipo);
-   void turno(char *hay, char carta_tira, char * cartas_coge);
+   void turno(char *hay, char carta_tira, const char * cartas_coge);
    void baza(char carta);
-   char * me_llamo();
+   const char * me_llamo();
    int mi_naturaleza() { return naturaleza; }
-   char * mi_mano() { return mano; }
+   const char * mi_mano() { return mano; }
    int num_cartas();
    int num_oros();
    int num_sietes();

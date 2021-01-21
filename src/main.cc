@@ -2,23 +2,23 @@
  * Programa:   main.cc 
  * Directorio: xescoba-1.2.1/src 
  * Fecha:      Sun Apr 15 16:42:49 CEST 2001 
- * Autor:      Ignacio Martín Bragado.
+ * Autor:      Ignacio Martï¿½n Bragado.
  * e-mail:     ignacio.martin@tel.uva.es 
- * Máquina:    Linux 
+ * Mï¿½quina:    Linux 
  */
 /*
- * Este programa es de libre distribución; puedes distribuirlo y/o modificarlo
- * bajo los términos de la GNU General Public License como se publicó por la
- * Free Software Foundation; bien la versión 2 de la licencia o,  bajo tu
- * criterio, cualquier versión posterior.
+ * Este programa es de libre distribuciï¿½n; puedes distribuirlo y/o modificarlo
+ * bajo los tï¿½rminos de la GNU General Public License como se publicï¿½ por la
+ * Free Software Foundation; bien la versiï¿½n 2 de la licencia o,  bajo tu
+ * criterio, cualquier versiï¿½n posterior.
  * 
- * Este programa se distribuye con la esperanza de que sea útil, pero 
- * SIN NINGUNA GARANTÏA; sin, incluso, ninguna garantía implicada por
- * MERCANCIBILIDAD o POR ALGÜN PROPÓSITO PARTICULAR. Lee la
- * GNU General Public License para más información.
+ * Este programa se distribuye con la esperanza de que sea ï¿½til, pero 
+ * SIN NINGUNA GARANTï¿½A; sin, incluso, ninguna garantï¿½a implicada por
+ * MERCANCIBILIDAD o POR ALGï¿½N PROPï¿½SITO PARTICULAR. Lee la
+ * GNU General Public License para mï¿½s informaciï¿½n.
  * 
- * Deberías haber recibido una copia de la GNU General Public License
- * junto con este programa. Si no es así escribe a Free Software
+ * Deberï¿½as haber recibido una copia de la GNU General Public License
+ * junto con este programa. Si no es asï¿½ escribe a Free Software
  * Foundation, Inc., 675 Mass Ave, Cambridge, MA 02139, USA.
  * *****************************************************/
 
@@ -49,7 +49,7 @@
 GtkWidget * hbox_centro; //Para las cartas centro.
 GtkWidget * hbox_mano; //Para mi mano.
 GtkWidget * status; //El status.. dentro de vbox
-GtkWidget * ppal; //La lista donde irá el texto.
+GtkWidget * ppal; //La lista donde irï¿½ el texto.
 GtkWidget * label_boton_turno;
 GtkWidget * boton_turno;
 GtkWidget * cartas_jugada_comp;
@@ -57,7 +57,7 @@ struct GLOBAL global;
 
 int main(int argc, gchar *argv[])
 {
-   GtkWidget * window; //La ventana de aplicación
+   GtkWidget * window; //La ventana de aplicaciï¿½n
    GtkWidget * vbox; //Contenedor principal.
    GtkWidget * hbox_botones; //Una caja de botones.
    GtkWidget * boton_salir;
@@ -69,7 +69,7 @@ int main(int argc, gchar *argv[])
    bindtextdomain (PACKAGE, LOCALEDIR);
    textdomain (PACKAGE);
    
-   comprueba_configuracion(); /* Comprueba que exista el fichero de configuración
+   comprueba_configuracion(); /* Comprueba que exista el fichero de configuraciï¿½n
 			       * y si no existe lo crea */
    
    /* Asigno algunos valores globales */
@@ -86,7 +86,7 @@ int main(int argc, gchar *argv[])
        
    /* Inicializo el gtk */
    gtk_init(&argc, &argv);
-   window = gtk_window_new(GTK_WINDOW_TOPLEVEL); //Ventana aplicación
+   window = gtk_window_new(GTK_WINDOW_TOPLEVEL); //Ventana aplicaciï¿½n
    gtk_window_set_title(GTK_WINDOW(window),_("Spanish 'escoba' game") );
    gtk_signal_connect(GTK_OBJECT(window),
 		      "destroy",
@@ -99,10 +99,10 @@ int main(int argc, gchar *argv[])
    gtk_container_add(GTK_CONTAINER(window),vbox); //Meto vbox en ventana ap.
    gtk_widget_show(vbox);
    
-   /* Creo el widget tooltips, para los comentarios pequeños */
+   /* Creo el widget tooltips, para los comentarios pequeï¿½os */
    comentario = gtk_tooltips_new();
    
-   //Ahora adoso el menú...desplegable
+   //Ahora adoso el menï¿½...desplegable
    
    GtkWidget * caja_asir=Crea_menu();
    gtk_container_add(GTK_CONTAINER(vbox), caja_asir);
@@ -161,7 +161,7 @@ int main(int argc, gchar *argv[])
 			_("Click here to exit game"),
 			NULL);
 
-   /* Un botón de ayuda */
+   /* Un botï¿½n de ayuda */
    GtkWidget * help_button = gtk_button_new_with_label(_("Help"));
    gtk_container_add(GTK_CONTAINER(hbox_botones),help_button);
    gtk_widget_show(help_button);
@@ -172,7 +172,7 @@ int main(int argc, gchar *argv[])
    gtk_tooltips_set_tip(comentario,help_button,
 		        _("Click here to get help"),NULL);
    
-   /* El botón de turno un poco distinto... necesito una etiqueta */
+   /* El botï¿½n de turno un poco distinto... necesito una etiqueta */
    boton_turno = gtk_button_new();
    gtk_container_add(GTK_CONTAINER(hbox_botones),boton_turno);
    gtk_widget_show(boton_turno);
@@ -190,11 +190,11 @@ int main(int argc, gchar *argv[])
    gtk_widget_show(label_boton_turno);
    
    //Ahora tengo que crear una ventanica donde salga la
-   //última jugada computerizada
+   //ï¿½ltima jugada computerizada
    
    GtkWidget * jugada_comp;
    
-   jugada_comp = gtk_window_new(GTK_WINDOW_TOPLEVEL); //Ventana aplicación
+   jugada_comp = gtk_window_new(GTK_WINDOW_TOPLEVEL); //Ventana aplicaciï¿½n
    gtk_window_set_title(GTK_WINDOW(jugada_comp), _("Game's status") );
    
    GtkWidget *box_jugada_comp = gtk_vbox_new(FALSE,5);
@@ -211,7 +211,7 @@ int main(int argc, gchar *argv[])
    gtk_container_add(GTK_CONTAINER(frame),cartas_jugada_comp);
    gtk_widget_show(cartas_jugada_comp);
 
-   /* Creo la ventana donde saldrá el texto del desarrollo del juego */
+   /* Creo la ventana donde saldrï¿½ el texto del desarrollo del juego */
    ppal = gtk_text_new(NULL,NULL);
    gtk_text_set_editable(GTK_TEXT(ppal),FALSE);
    gtk_container_add(GTK_CONTAINER(box_jugada_comp),ppal);
@@ -224,16 +224,16 @@ int main(int argc, gchar *argv[])
    gtk_container_add(GTK_CONTAINER(box_jugada_comp),status);
    gtk_widget_show(status);
    
-   gtk_widget_show(jugada_comp); //Para ver la ventana de última jugada
+   gtk_widget_show(jugada_comp); //Para ver la ventana de ï¿½ltima jugada
    global.widget_ver_cartas=jugada_comp; //Guardo este widget para mostrarle
    //y ocultarle
 
    //Por fin muestro la ventana ppal.
-   gtk_widget_show(window); //Para ver la ventana aplicación
+   gtk_widget_show(window); //Para ver la ventana aplicaciï¿½n
   
    gtk_idle_add(idle_func,(gpointer)window);
  
-//   valores_menu_defecto(ifactory); //Paso los valores por defecto al menú.
+//   valores_menu_defecto(ifactory); //Paso los valores por defecto al menï¿½.
    
    gtk_main();  //Er bucle...
    
@@ -247,13 +247,13 @@ jugador * ultimo_en_ganar;
 int num_jug=0;
 
 void func_turno(GtkWidget * widget, gpointer data)
-/* Cada vez que se pulsa este botón debe pasar un turno... */
+/* Cada vez que se pulsa este botï¿½n debe pasar un turno... */
 {
    static int quien_da =0; //Quien da en primer lugar.
    static int puntos[4]={0,0,0,0}; /* Los puntos de cada uno */
-   static baraja *cartas; //Aquí meteré la baraja.
-   static jugador *gente; //Aquí la gente.
-   static CONF conf(global.FICH_CONF); /* Lee la configuración */
+   static baraja *cartas; //Aquï¿½ meterï¿½ la baraja.
+   static jugador *gente; //Aquï¿½ la gente.
+   static CONF conf(global.FICH_CONF); /* Lee la configuraciï¿½n */
    static int a_quien_toca=1;
    char temporal[80];
    int i;
@@ -300,7 +300,7 @@ void func_turno(GtkWidget * widget, gpointer data)
 	suma_centro+=CARTA(centro[i]);
       if (suma_centro == 15) {
 	 for (i=0;i<4;i++)
-	   coge(centro[i],gente[num_jug-1]);  /* Será una escoba
+	   coge(centro[i],gente[num_jug-1]);  /* Serï¿½ una escoba
 					       y se la lleva el que dio */
       }
       if (suma_centro == 30) {
@@ -308,7 +308,7 @@ void func_turno(GtkWidget * widget, gpointer data)
 	 for (i=0;i<4;i++)
 	   if (CARTA(centro[i]) <8 )
 	     menor8++;
-	 if (menor8 == 2) { /* Sólo si ha hecho dos escobas */
+	 if (menor8 == 2) { /* Sï¿½lo si ha hecho dos escobas */
 	    for (i=0;i<4;i++)
 	      coge(centro[i],gente[num_jug-1]);
 	    gente[num_jug-1].hizo_escoba();
@@ -331,7 +331,7 @@ void func_turno(GtkWidget * widget, gpointer data)
       
       suena(SONIDO_REPARTIR);
       
-      /* Hay que actualizar las cartas sólo si es humano */
+      /* Hay que actualizar las cartas sï¿½lo si es humano */
       if (gente[a_quien_toca].mi_naturaleza() == HUMANO )
 	  pon_mano(&gente[a_quien_toca]);
       pon_centro(&gente[a_quien_toca]);
@@ -340,11 +340,11 @@ void func_turno(GtkWidget * widget, gpointer data)
   
    if ((intptr_t)data == TURNO_TURNO) { /* Esto supone que se ha oprimido el turno */
       
-      /* Aquí todos tienen cartas */
-      /* En la variable a_quien_toca está el turno de quien es */
+      /* Aquï¿½ todos tienen cartas */
+      /* En la variable a_quien_toca estï¿½ el turno de quien es */
       /* Ahora es su turno */
 
-      /* Si es humano miro que su jugada esté bien hecha. */
+      /* Si es humano miro que su jugada estï¿½ bien hecha. */
       if (gente[a_quien_toca].mi_naturaleza() == HUMANO) {
 	 int suma=CARTA(tira_carta);
 	 for (i=0;i<40;i++)
@@ -386,11 +386,11 @@ void func_turno(GtkWidget * widget, gpointer data)
       }
    }
    else {
-      /* Aquí es que ya se han acabado todas las
+      /* Aquï¿½ es que ya se han acabado todas las
        * cartas de la baraja y de las manos de los
        * jugadores */
       
-      juego_fin=1;  //Ya se acabó el juego.
+      juego_fin=1;  //Ya se acabï¿½ el juego.
       pon_ultima_jugada(centro);//Para que se vea quien se lleva las cartas.
       for (i=0;i<40;i++)
 	if (centro[i] != -1)
@@ -410,7 +410,7 @@ void func_turno(GtkWidget * widget, gpointer data)
 	func_turno(widget,(gpointer)TURNO_EMPEZAR);
    }
       
-   /* Última comprobación: veamos si ya tiene alguien 11 puntos o más */
+   /* ï¿½ltima comprobaciï¿½n: veamos si ya tiene alguien 11 puntos o mï¿½s */
       
       if ( puntos[0] >= 11 || puntos[1] >= 11 
 	  || puntos[2]>=11 || puntos[3] >= 11) {
@@ -420,7 +420,7 @@ void func_turno(GtkWidget * widget, gpointer data)
 	 for (i=0;i<num_jug;i++)
 	   if (puntos[i]>punto_mayor) {
 	      punto_mayor=puntos[i];
-	      j=i; //En i estará el jugador ganador....
+	      j=i; //En i estarï¿½ el jugador ganador....
 	   }
 	 /* Falta comprobar el caso de empate */
 	 for (i=0;i<num_jug;i++)
@@ -468,7 +468,7 @@ void pon_en_lista(const gchar * texto,const gchar * personaje)
    if (temp[strlen(temp)-1] == '\n') //Si termina en retorno de carro
        temp[strlen(temp)-1]=0; //Lo elimino.
    
-   //Quizás habría que diseñar algún mecanismo para que quite texto por arriba.
+   //Quizï¿½s habrï¿½a que diseï¿½ar algï¿½n mecanismo para que quite texto por arriba.
    
    if (personaje)
        gtk_text_insert(GTK_TEXT(ppal),NULL,&color,NULL,personaje,-1);
@@ -477,7 +477,7 @@ void pon_en_lista(const gchar * texto,const gchar * personaje)
    
 }
 
-void jugada_no_vale(char *texto)
+void jugada_no_vale(const char *texto)
 {
    GtkWidget * window = gtk_dialog_new();
    GtkTooltips * coment = gtk_tooltips_new();
@@ -539,7 +539,7 @@ void comprueba_configuracion(void)
    FILE *f = fopen(global.FICH_CONF,"r");
    if (f == NULL)
      {
-	/* Creo la configuración */
+	/* Creo la configuraciï¿½n */
 	FILE *f = fopen(global.FICH_CONF,"w");
 	if (f == NULL)
 	  {
